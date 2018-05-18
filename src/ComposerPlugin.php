@@ -88,7 +88,7 @@ class ComposerPlugin implements PluginInterface, EventSubscriberInterface
             $installationDir = 'wordpress';
         }
 
-        $htfile = getcwd() . $installationDir . "/.htaccess";
+        $htfile = getcwd() . "/" . $installationDir . "/.htaccess";
         if (file_exists($htfile)) {
             file_put_contents($htfile, $this->getHtaccess());
         }
