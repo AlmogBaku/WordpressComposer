@@ -1,5 +1,5 @@
 {
-  "name": "AlmogBaku/WordpressComposer",
+  "name": "almogbaku/wordpress-composer",
   "description": "Fix wordpress installation.",
   "license": "MIT",
   "type": "composer-plugin",
