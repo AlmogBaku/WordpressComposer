@@ -41,9 +41,8 @@ class ComposerPlugin implements PluginInterface, EventSubscriberInterface
     }
 
     /**
-     * Hook up this function to package install to move files defined in composer.json -> extra -> dropin-paths
      * Run this command as post-install-package
-     * @param Composer\Installer\PackageEvent $event - Composer automatically tells information about itself for custom scripts
+     * @param PackageEvent $event - Composer automatically tells information about itself for custom scripts
      */
     public function onPackageInstall(PackageEvent $event)
     {
@@ -54,9 +53,8 @@ class ComposerPlugin implements PluginInterface, EventSubscriberInterface
     }
 
     /**
-     * Hook up this function to package install to move files defined in composer.json -> extra -> dropin-paths
      * Run this command as post-install-package
-     * @param Composer\Installer\PackageEvent $event - Composer automatically tells information about itself for custom scripts
+     * @param PackageEvent $event - Composer automatically tells information about itself for custom scripts
      */
     public function onPackageUpdate(PackageEvent $event)
     {
