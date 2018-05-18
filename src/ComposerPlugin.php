@@ -3,6 +3,7 @@
 namespace AlmogBaku\WordpressComposer;
 
 use Composer\Composer;
+use Composer\EventDispatcher\EventSubscriberInterface;
 use Composer\IO\IOInterface;
 use Composer\Plugin\PluginInterface;
 use Composer\Installer\PackageEvent;
