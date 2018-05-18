@@ -1,0 +1,24 @@
+{
+  "name": "AlmogBaku/WordpressComposer",
+  "description": "Fix wordpress installation.",
+  "license": "MIT",
+  "type": "composer-plugin",
+  "authors": [
+    {
+      "name": "Almog Baku",
+      "email": "almog.baku@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "composer-plugin-api": "^1.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "AlmogBaku\\WordpressComposer\\": "src"
+    }
+  },
+  "extra": {
+    "class": "AlmogBaku\\WordpressComposer\\ComposerPlugin"
+  }
+}
