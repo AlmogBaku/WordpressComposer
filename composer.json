@@ -11,7 +11,9 @@
   ],
   "minimum-stability": "dev",
   "require": {
-    "composer-plugin-api": "^1.1"
+    "composer-plugin-api": "^1.1",
+    "johnpbloch/wordpress": ">=4.9",
+    "koodimonni/composer-dropin-installer": "*"
   },
   "require-dev": {
     "composer/composer": "^1.1",

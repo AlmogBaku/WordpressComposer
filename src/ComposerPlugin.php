@@ -89,7 +89,7 @@ class ComposerPlugin implements PluginInterface, EventSubscriberInterface
         }
 
         $htfile = getcwd() . "/" . $installationDir . "/.htaccess";
-        if (file_exists($htfile)) {
+        if (!file_exists($htfile)) {
             file_put_contents($htfile, $this->getHtaccess());
         }
     }
