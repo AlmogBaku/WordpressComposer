@@ -4,6 +4,7 @@ namespace AlmogBaku\WordpressComposer;
 
 use Composer\Composer;
 use Composer\EventDispatcher\EventSubscriberInterface;
+use Composer\Installer\PackageEvents;
 use Composer\IO\IOInterface;
 use Composer\Plugin\PluginInterface;
 use Composer\Installer\PackageEvent;
@@ -16,6 +17,8 @@ class ComposerPlugin implements PluginInterface, EventSubscriberInterface
 
     /**
      * Composer plugin default behaviour
+     * @param Composer $composer
+     * @param IOInterface $io
      */
     public function activate(Composer $composer, IOInterface $io)
     {
@@ -25,20 +28,13 @@ class ComposerPlugin implements PluginInterface, EventSubscriberInterface
 
     /**
      * Subscribe to package changed events
-     * TODO: It might be good idea to gather all changes into static variable
-     * and then do all of them after install/update finishes
-     * This way some extra ordinary dropins would behave more predictable
      */
     public static function getSubscribedEvents()
     {
-        return array(
-            "post-package-install" => array(
-                array('onPackageInstall', 0)
-            ),
-            "post-package-update" => array(
-                array('onPackageUpdate', 0)
-            ),
-        );
+        return [
+            PackageEvents::POST_PACKAGE_INSTALL => 'onPackageInstall',
+            PackageEvents::POST_PACKAGE_UPDATE => 'onPackageUpdate'
+        ];
     }
 
     /**
