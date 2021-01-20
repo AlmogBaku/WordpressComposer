@@ -13,6 +13,7 @@
   "require": {
     "composer-plugin-api": "^1.1",
     "johnpbloch/wordpress": ">=4.9",
+    "wpackagist-plugin/enable-jquery-migrate-helper":"*",
     "koodimonni/composer-dropin-installer": "*"
   },
   "require-dev": {
